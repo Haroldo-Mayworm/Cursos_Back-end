@@ -1,4 +1,4 @@
-package modificadorAcesso.dominio;
+package devDojo.modificadorAcesso.dominio;
 
 public class People {
     private String name;
@@ -15,5 +15,13 @@ public class People {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public int getAge() {
+        return this.age;
     }
 }

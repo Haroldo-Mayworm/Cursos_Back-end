@@ -1,5 +1,3 @@
-package devDojo.Static.methodsStatic.domain;
-
 public class Car {
     private String name;
     private double maxSpeed;

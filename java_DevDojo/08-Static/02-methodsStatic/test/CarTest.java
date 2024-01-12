@@ -1,6 +1,4 @@
-package devDojo.Static.methodsStatic.test;
-
-import devDojo.Static.methodsStatic.domain.Car;
+import domain.Car;
 
 public class CarTest {
     public static void main(String[] args) {

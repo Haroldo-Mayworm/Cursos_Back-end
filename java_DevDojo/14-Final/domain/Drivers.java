@@ -1,15 +1,9 @@
-package devDojo.sobrescrita.domain;
-
-public class SoccerTeam {
+public class Drivers {
     private String name;
 
     @Override
     public String toString() {
-        return "time = " + this.name;
-    }
-
-    public SoccerTeam(String name) {
-        this.name = name;
+        return "Drivers-name = " + name;
     }
 
     public String getName() {

@@ -1,9 +1,7 @@
-var DBConnection = require('../../config/DBConnection');
-
 module.exports = function (app) {
-    var connection = DBConnection();
-
     app.get('/news', function (req, res) {
+        var connection = app.config.DBConnection();
+
         connection.query('select * from news_list', function (error, result) {
             if (error) {
                 console.error('Error executing query:', error);

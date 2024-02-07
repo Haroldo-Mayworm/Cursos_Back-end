@@ -13,14 +13,12 @@
         <tr>
             <td>Id news</td>
             <td>Title</td>
-            <td>Content</td>
         </tr>
 
         <% for(var i = 0; i < newsList.length; i++) { %>
         <tr>
             <td><%= newsList[i].id %></td>
             <td><%= newsList[i].title %></td>
-            <td><%= newsList[i].body %></td>
         </tr>
         <% } %>
     </table>

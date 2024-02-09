@@ -1,10 +1,13 @@
 var consign = require('consign');
+var bodyParser = require('body-parser');
 var express = require('express');
 var app = express();
 var port = 3000;
 
 app.set('view engine', 'ejs');
 app.set('views', './app/views');
+
+app.use(bodyParser.urlencoded({extended: true}));
 
 consign()
     .include('app/routes')

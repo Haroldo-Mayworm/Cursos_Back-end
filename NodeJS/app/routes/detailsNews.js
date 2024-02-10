@@ -1,9 +1,9 @@
 module.exports = function (app) {
     app.get('/news/news1', function (req, res) {
         var connection = app.config.DBConnection();
-        var newsModel = app.app.models.newsModel;
+        var newsModel = new app.app.models.NewsDAO(connection);
 
-        newsModel.getNewsDetails(connection, function (error, result) {
+        newsModel.getNewsDetails(function (error, result) {
             if (error) {
                 console.error('Error executing query:', error);
                 res.status(500).send('Internal Server Error');

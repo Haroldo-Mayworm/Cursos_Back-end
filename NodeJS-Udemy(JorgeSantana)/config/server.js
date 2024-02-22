@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 consign()
     .include('app/routes')
     .then('app/models')
+    .then('app/controllers')
     .then('config/DBConnection.js')
     .into(app);
 

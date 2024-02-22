@@ -37,61 +37,59 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="noticia_wrapper">
-                    <span class="noticia_autor">Por Jorge</span>
-                    <a href="noticia.html" class="noticia_titulo">Título da notícia</a>
-                    <span class="noticia_data">07/09/2016</span>
+                    <span class="noticia_autor">
+                        <%= news[0].author %>
+                    </span>
+                    <a href="noticia.html" class="noticia_titulo">
+                        <%= news[0].title %>
+                    </a>
+                    <span class="noticia_data">
+                        <%= news[0].date_create %>
+                    </span>
                     <br />
                     <p class="noticia_resumo">
-                        Aqui fica o resumo da notícia principal da página com um limite de 100 caracteres!
+                        <%= news[0].resume %>
                     </p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="noticia_wrapper">
-                    <span class="noticia_autor">Por Jorge</span>
-                    <a href="noticia.html" class="noticia_titulo">Título da notícia</a>
-                    <span class="noticia_data">07/09/2016</span>
+                    <span class="noticia_autor">
+                        <%= news[1].author %>
+                    </span>
+                    <a href="noticia.html" class="noticia_titulo">
+                        <%= news[1].title %>
+                    </a>
+                    <span class="noticia_data">
+                        <%= news[1].date_create %>
+                    </span>
                     <br />
                     <p class="noticia_resumo">
-                        Aqui fica o resumo da notícia com um limite de 100 caracteres!
+                        <%= news[1].resume %>
                     </p>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="noticia_wrapper">
-                    <span class="noticia_autor">Por Jorge</span>
-                    <a href="noticia.html" class="noticia_titulo">Título da notícia</a>
-                    <span class="noticia_data">07/09/2016</span>
-                    <br />
-                    <p class="noticia_resumo">
-                        Aqui fica o resumo da notícia com um limite de 100 caracteres!
-                    </p>
+            <% for(var i=2; i < news.length; i++) { %>
+                <div class="col-md-4">
+                    <div class="noticia_wrapper">
+                        <span class="noticia_autor">
+                            <%= news[i].author %>
+                        </span>
+                        <a href="noticia.html" class="noticia_titulo">
+                            <%= news[i].title %>
+                        </a>
+                        <span class="noticia_data">
+                            <%= news[i].date_create %>
+                        </span>
+                        <br />
+                        <p class="noticia_resumo">
+                            <%= news[i].resume %>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="noticia_wrapper">
-                    <span class="noticia_autor">Por Jorge</span>
-                    <a href="noticia.html" class="noticia_titulo">Título da notícia</a>
-                    <span class="noticia_data">07/09/2016</span>
-                    <br />
-                    <p class="noticia_resumo">
-                        Aqui fica o resumo da notícia com um limite de 100 caracteres!
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="noticia_wrapper">
-                    <span class="noticia_autor">Por Jorge</span>
-                    <a href="noticia.html" class="noticia_titulo">Título da notícia</a>
-                    <span class="noticia_data">07/09/2016</span>
-                    <br />
-                    <p class="noticia_resumo">
-                        Aqui fica o resumo da notícia com um limite de 100 caracteres!
-                    </p>
-                </div>
-            </div>
+                <% } %>
         </div>
         <div class="row ver_mais">
             <button type="button" class="btn btn-default"><a href="noticias.html">Ver todas as notícias</a></button>

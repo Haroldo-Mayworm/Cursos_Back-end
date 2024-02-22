@@ -14,6 +14,10 @@ NewsDAO.prototype.saveNews = function (news, callback) {
     this._connection.query('insert into news_list set ? ', news, callback);
 };
 
+NewsDAO.prototype.getLastFiveNews = function (callback) {
+    this._connection.query('select * from news_list order by date_create desc limit 5', callback);
+};
+
 module.exports = function () {
     return NewsDAO;
 };

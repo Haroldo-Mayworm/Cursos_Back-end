@@ -40,7 +40,7 @@
                     <span class="noticia_autor">
                         <%= news[0].author %>
                     </span>
-                    <a href="noticia.html" class="noticia_titulo">
+                    <a href="news1?id=<%= news[0].id %>" class="noticia_titulo">
                         <%= news[0].title %>
                     </a>
                     <span class="noticia_data">
@@ -57,7 +57,7 @@
                     <span class="noticia_autor">
                         <%= news[1].author %>
                     </span>
-                    <a href="noticia.html" class="noticia_titulo">
+                    <a href="news1?id=<%= news[1].id %>" class="noticia_titulo">
                         <%= news[1].title %>
                     </a>
                     <span class="noticia_data">
@@ -77,7 +77,7 @@
                         <span class="noticia_autor">
                             <%= news[i].author %>
                         </span>
-                        <a href="noticia.html" class="noticia_titulo">
+                        <a href="news1?id=<%= news[i].id %>" class="noticia_titulo">
                             <%= news[i].title %>
                         </a>
                         <span class="noticia_data">
@@ -92,7 +92,7 @@
                 <% } %>
         </div>
         <div class="row ver_mais">
-            <button type="button" class="btn btn-default"><a href="noticias.html">Ver todas as notícias</a></button>
+            <button type="button" class="btn btn-default"><a href="news">Ver todas as notícias</a></button>
         </div>
     </div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"

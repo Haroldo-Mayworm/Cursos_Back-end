@@ -3,11 +3,11 @@ function NewsDAO(connection) {
 }
 
 NewsDAO.prototype.getNews = function (callback) {
-    this._connection.query('select * from news_list', callback);
+    this._connection.query('select * from news_list order by date_create desc', callback);
 };
 
-NewsDAO.prototype.getNewsDetails = function (callback) {
-    this._connection.query('select * from news_list where id = 1', callback);
+NewsDAO.prototype.getNewsDetails = function (id_news, callback) {
+    this._connection.query('select * from news_list where id = ' + id_news.id, callback);
 };
 
 NewsDAO.prototype.saveNews = function (news, callback) {
